@@ -1,0 +1,37 @@
+/* Find My Solana website. Self-contained: no external fonts, scripts or trackers. */
+:root {
+  --bg: #0c0b16; --surface: #16142a; --outline: #363255;
+  --text: #f2f0ff; --muted: #a9a5c6; --violet: #8c52ff; --mint: #1fe0a6;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+a { color: var(--mint); }
+.wordmark {
+  font-weight: 900; letter-spacing: .18em; font-size: 22px; text-decoration: none;
+  background: linear-gradient(90deg, var(--violet), var(--mint));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+nav .links a { color: var(--muted); text-decoration: none; margin-left: 16px; }
+nav .links a:hover { color: var(--text); }
+h1 { font-size: clamp(30px, 7vw, 44px); line-height: 1.15; margin: 0 0 12px; }
+h2 { font-size: 22px; margin: 36px 0 8px; }
+p, li { color: var(--muted); }
+strong { color: var(--text); }
+.lead { font-size: 19px; }
+.card { background: var(--surface); border: 1px solid var(--outline); border-radius: 20px; padding: 20px 22px; margin: 16px 0; }
+.card h3 { margin: 0 0 4px; font-size: 17px; }
+.card p { margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.pill { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--mint); color: var(--mint); font-size: 14px; margin: 0 6px 8px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--outline); }
+th { color: var(--text); } td { color: var(--muted); }
+code { background: var(--surface); padding: 1px 6px; border-radius: 6px; font-size: 14px; }
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--outline); color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) { table, thead, tbody, tr, th, td { display: block; } th { padding-bottom: 0; border: 0; } }
