@@ -32,6 +32,10 @@ strong { color: var(--text); }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid .card { margin: 0; }
 @media (max-width: 520px) { .grid.two .card { padding: 14px; } .grid.two .card h3 { font-size: 16px; } .grid.two .card p { font-size: 15px; line-height: 1.45; } }
+.hero { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 8px; }
+.hero h1 { margin: 0; }
+.hero .hero-logo { margin: 0; flex: none; }
+@media (max-width: 520px) { .hero { flex-direction: column-reverse; align-items: flex-start; gap: 20px; } }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--mint); color: var(--mint); font-size: 14px; margin: 0 6px 8px 0; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
 th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--outline); }
