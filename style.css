@@ -32,13 +32,15 @@ strong { color: var(--text); }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid .card { margin: 0; }
 @media (max-width: 520px) { .grid.two .card { padding: 14px; } .grid.two .card h3 { font-size: 16px; } .grid.two .card p { font-size: 15px; line-height: 1.45; } }
-.hero { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 8px; }
+.hero { display: flex; align-items: center; justify-content: flex-start; gap: 24px; margin-bottom: 8px; }
 .hero h1 { margin: 0; }
-.hero .hero-logo { margin: 0; flex: none; }
+.hero h1.oneline { white-space: nowrap; }
+.hero .hero-logo { margin: 0; flex: none; order: -1; } /* logo on the left, title next to it */
 .hero-logo svg { width: 78%; height: 78%; }
 @media (max-width: 520px) {
   .hero { gap: 12px; }
   .hero h1 { font-size: 26px; }
+  .hero h1.oneline { font-size: 21px; }
   .hero .hero-logo { width: 72px; height: 72px; border-radius: 16px; }
 }
 .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--mint); color: var(--mint); font-size: 14px; margin: 0 6px 8px 0; }
